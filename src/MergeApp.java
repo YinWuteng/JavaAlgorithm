@@ -13,17 +13,17 @@ public class MergeApp {
 
         int a = 0, b = 0, c = 0;
 
-        while (a < arrayALength && b < arrayBLength) { //数组A和数组B均遍历完
+        while (a < arrayALength && b < arrayBLength) { //数组A或数组B遍历完
             if (arrayA[a] < arrayB[b]) {
                 arrayC[c++] = arrayA[a++];
             } else {
                 arrayC[c++] = arrayB[b++];
             }
         }
-        while (a < arrayALength) {
+        while (a < arrayALength) { //数组A的长度大于数组B
             arrayC[c++] = arrayA[a++];
         }
-        while (b < arrayBLength) {
+        while (b < arrayBLength) { //数组B的长度大于数组A
             arrayC[c++] = arrayB[b++];
         }
 
