@@ -31,37 +31,6 @@ public class Main {
         return matcher.matches();
     }
 
-    public static int quickSort(int[] data, int left, int right) {
-        int temp = data[left];
-        while (left < right) {
-            while (data[right] > temp && left < right) { //比较右边
-                right--;
-            }
-            //交换
-            if (left < right) {
-                data[left] = data[right];
-                left++;
-            }
 
-            while (data[left] < temp && left < right) {
-                left++;
-            }
-            if (left < right) {
-                data[right] = data[left];
-                right--;
-            }
-        }
-        data[left] = temp;
-        return left;
-    }
-
-    public static int[] partion(int[] data, int left, int right) {
-        if (data == null || left >= right || data.length <= 1) return data;
-
-        int mid = quickSort(data, left, right);
-        quickSort(data, left, mid);
-        quickSort(data, mid + 1, right);
-        return data;
-    }
 }
 

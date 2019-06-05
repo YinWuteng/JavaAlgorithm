@@ -63,36 +63,7 @@ public class SingleTon {
         private static final SingleTon sInstance = new SingleTon();
     }
 
-    private int[] quickSort(int[] data, int left, int right) {
-        if (data == null || left >= right) return data;
-        int mid = partion(data, left, right);
-        partion(data, left, mid);
-        partion(data, mid + 1, right);
-        return data;
-    }
 
-    private int partion(int[] data, int left, int right) {
-        int temp = data[left];
-        while (left < right) {
-            while (left < right && data[right] >= temp) {
-                right--;
-            }
-            //右边的值交换到左边,此时left++
-            if (left < right) {
-                data[left] = data[right];
-                left++;
-            }
-            while (left < right && data[left] < temp) {
-                left++;
-            }
-            if (left < right) {
-                data[right] = data[left];
-                right--;
-            }
-        }
-        data[left] = temp;
-        return left;
-    }
 }
 
 

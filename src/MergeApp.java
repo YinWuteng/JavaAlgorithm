@@ -4,7 +4,7 @@ import java.util.Arrays;
  * 创建人：yinwuteng
  * 创建时间：2019/2/28
  * 版本号：1.0.1
- * 描述：归并排序
+ * 描述：归并排序，通常用来合并两个有序数组
  * 设计文档：
  */
 public class MergeApp {
