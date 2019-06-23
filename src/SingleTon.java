@@ -12,10 +12,10 @@ public class SingleTon {
     /**
      * 俄汉式 ,避免了多线程的同步问题，在类加载的时候就完成实例化，没有达到懒加载的效果，如果始终未使用这个实例，或造成内存的浪费
      */
-//    public SingleTon() {
+//    private SingleTon() {
 //    }
 //
-//    public static SingleTon instance = new SingleTon();
+//    private static SingleTon instance = new SingleTon();
 //
 //    public static SingleTon getInstance() {
 //        return instance;
