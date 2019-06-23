@@ -3,7 +3,7 @@ import java.util.Stack;
 /**
  * 实现一个能找到栈的最小元素的min函数
  * min push pop的复杂度都是O(1)
- * 思路:利用辅助栈
+ * 思路:利用辅助栈来解决
  */
 
 
