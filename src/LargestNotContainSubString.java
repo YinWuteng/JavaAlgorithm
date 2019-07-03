@@ -24,7 +24,7 @@ public class LargestNotContainSubString {
             int letterNumber = str.charAt(i) - 'a';//用于记录当前字母
 
             // 小于0代表没有出现过 或 当前出现的距离大于最大值
-            if (pos[letterNumber] < 0 && i - pos[letterNumber] > preLength) {
+            if (pos[letterNumber] < 0 || i - pos[letterNumber] > preLength) {
                 curLength = preLength + 1;
             } else {//出现的距离小于长度的最大值
                 curLength = i - pos[letterNumber];
